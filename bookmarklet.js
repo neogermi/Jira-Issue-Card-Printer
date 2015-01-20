@@ -619,6 +619,7 @@ body {
   transform: rotate(-90deg);
   font-size: 0.4cm;
   color: DARKGREY;
+  display: none;
 }
 .card-border {
   position: absolute;
@@ -638,6 +639,8 @@ body {
   margin-right: 1.1cm;
   margin-bottom: 0.2cm;
   min-height: 5.0cm;
+  max-height: 100px;
+  overflow: hidden;
 }
 .content-header {
   position: relative;
