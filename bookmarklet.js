@@ -590,8 +590,8 @@ body {
   border-radius: 50%;
 }
 .badge {
-  width: 4.2cm;
-  height: 4.2cm;
+  width: 3.8cm;
+  height: 3.8cm;
   background: #d0d0d0;
 }
 .card {
@@ -656,7 +656,7 @@ body {
   min-width: 4.4cm;
   height: 3.35cm;
   top: 0cm;
-  left: 3cm;
+  left: 3.3cm;
   margin-top: 0cm;
   padding-top: 0.2cm;
   padding-left: 0.9cm;
@@ -664,13 +664,13 @@ body {
   text-align: center;
   font-weight: bold;
   font-family: Arial;
-  font-size: 4cm;
+  font-size: 3.5cm;
   line-height: 3.30cm;
 }
 .type-icon {
   position: relative;
-  top: -0.35cm;
-  left: -0.75cm;
+  top: 0cm;
+  left: 0.1cm;
   float: left;
   background-color: GREENYELLOW;
   background-image: url({RESOURCE_ORIGIN}icons/Objects.png);
@@ -779,9 +779,10 @@ body {
 .qr-code {
   position: relative;
   float: left;
-  width: 2.1cm;
-  height: 2.1cm;
-  background-image: url(https://chart.googleapis.com/chart?cht=qr&chs=256x256&chld=L|1&chl=blog.qoomon.com);
+  width: 3.1cm;
+  height: 3.1cm;
+  background-image: none !important;
+  background: white;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
