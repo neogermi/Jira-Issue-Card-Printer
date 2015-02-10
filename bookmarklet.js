@@ -655,6 +655,7 @@ body {
   width: auto;
   min-width: 4.4cm;
   height: 3.35cm;
+  top: 0cm;
   left: 3cm;
   margin-top: 0cm;
   padding-top: 0.2cm;
@@ -668,8 +669,8 @@ body {
 }
 .type-icon {
   position: relative;
-  top: -0.35cm
-  left: -0.75cm
+  top: -0.35cm;
+  left: -0.75cm;
   float: left;
   background-color: GREENYELLOW;
   background-image: url({RESOURCE_ORIGIN}icons/Objects.png);
