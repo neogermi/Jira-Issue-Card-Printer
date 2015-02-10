@@ -710,6 +710,7 @@ body {
 .due {
   position: relative;
   float: right;
+  display: none;
 }
 .due-icon {
   position: relative;
