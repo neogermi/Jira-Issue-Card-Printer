@@ -1,16 +1,6 @@
 var qoomon_dev;
 var isDev = qoomon_dev;
 
-// <GoogleAnalytics>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-50840116-3', 'auto', {'alwaysSendReferrer': true});
-ga('send', {'hitType': 'pageview', 'page': '/jiracardprinter/Bookmarklet.js'});
-// </GoogleAnalytics>
-
 // load jQuery
 if (window.jQuery === undefined) {
   appendScript('//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js');
@@ -600,8 +590,8 @@ body {
   border-radius: 50%;
 }
 .badge {
-  width: 3.2cm;
-  height: 3.2cm;
+  width: 4.2cm;
+  height: 4.2cm;
   background: #d0d0d0;
 }
 .card {
@@ -664,19 +654,22 @@ body {
   float: left;
   width: auto;
   min-width: 4.4cm;
-  height: 1.35cm;
-  left: 2.8cm;
-  margin-top: 1.05cm;
+  height: 3.35cm;
+  left: 3cm;
+  margin-top: 0cm;
   padding-top: 0.2cm;
   padding-left: 0.9cm;
   padding-right: 0.4cm;
   text-align: center;
   font-weight: bold;
-  font-size: 1.0cm;
-  line-height: 1.30cm;
+  font-family: Arial;
+  font-size: 4cm;
+  line-height: 3.30cm;
 }
 .type-icon {
   position: relative;
+  top: -0.35cm
+  left: -0.75cm
   float: left;
   background-color: GREENYELLOW;
   background-image: url({RESOURCE_ORIGIN}icons/Objects.png);
@@ -699,6 +692,7 @@ body {
   background-image: url({RESOURCE_ORIGIN}icons/Flash.png);
 }
 .estimate {
+  display: none;
   position: relative;
   float: left;
   left: -0.65cm;
