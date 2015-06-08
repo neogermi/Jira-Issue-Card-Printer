@@ -1,29 +1,18 @@
-
 var qoomon_dev;
 var isDev = qoomon_dev;
 
 // load jQuery
-if (typeof window.jQuery === 'undefined') {
+if (window.jQuery === undefined) {
   appendScript('//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js');
 }
 
-function waitForLoad (done) {
-  console.log('wait for script load');
-  if (typeof window.jQuery !== 'undefined') {
-    console.log('all scripts loaded');
-    done();
-  }
-  setTimeout(function () {
-    waitForLoad(done)
-  }, 50);
-}
-
 // wait untill all scripts loaded
-waitForLoad(function() {
-  init(main);
+appendScript('https://qoomon.github.io/void', function(){
+  init();
+  main();
 });
 
-function init(done){
+function init(){
   addJQueryFunctions();
   addConsoleFunctions();
   addStringFunctions();
@@ -42,10 +31,6 @@ function init(done){
   //$("#card").load("https://cors-anywhere.herokuapp.com/"+"https://qoomon.github.io/Jira-Issue-Card-Printer/card.html");
 
   console.logLevel = console.INFO;
-
-  if (typeof done === 'function') {
-    done();
-  }
 }
 
 function main(){
