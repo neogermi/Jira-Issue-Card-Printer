@@ -694,16 +694,19 @@ body {
 .estimate {
   position: relative;
   float: left;
-  left: -0.65cm;
-  top:-1.5cm;
-  height: 1.1cm;
-  width: 1.1cm;
+  width: 3.1cm;
+  height: 3.1cm;
+  background-image: none !important;
+  background: white;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
   text-align: center;
   font-weight: bold;
   font-size: 1cm;
-  line-height: 1.15cm;
-  margin-top:1.5cm;
   z-index: 999;
+  line-height: 1;
 }
 .due {
   position: relative;
