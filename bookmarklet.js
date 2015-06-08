@@ -1,3 +1,4 @@
+
 var qoomon_dev;
 var isDev = qoomon_dev;
 
@@ -12,7 +13,9 @@ function waitForLoad (done) {
     console.log('all scripts loaded');
     done();
   }
-  setTimeout(waitForLoad, 50);
+  setTimeout(function () {
+    waitForLoad(done)
+  }, 50);
 }
 
 // wait untill all scripts loaded
