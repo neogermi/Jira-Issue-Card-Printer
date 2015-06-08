@@ -2,17 +2,25 @@ var qoomon_dev;
 var isDev = qoomon_dev;
 
 // load jQuery
-if (window.jQuery === undefined) {
+if (typeof window.jQuery === 'undefined') {
   appendScript('//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js');
 }
 
+function waitForLoad (done) {
+  console.log('wait for script load');
+  if (typeof window.jQuery !== 'undefined') {
+    console.log('all scripts loaded');
+    done();
+  }
+  setTimeout(waitForLoad, 50);
+}
+
 // wait untill all scripts loaded
-appendScript('https://qoomon.github.io/void', function(){
-  init();
-  main();
+waitForLoad(function() {
+  init(main);
 });
 
-function init(){
+function init(done){
   addJQueryFunctions();
   addConsoleFunctions();
   addStringFunctions();
@@ -20,10 +28,10 @@ function init(){
 
   printScopeDeviderToken = "<b>Attachment</b>";
 
-  hostOrigin = "https://qoomon.github.io/Jira-Issue-Card-Printer/";
+  hostOrigin = "https://neogermi.github.io/Jira-Issue-Card-Printer/";
   if(isDev){
     alert("Develop Version");
-    hostOrigin = "https://rawgit.com/qoomon/Jira-Issue-Card-Printer/develop/";
+    hostOrigin = "https://rawgit.com/neogermi/Jira-Issue-Card-Printer/develop/";
   }
   resourceOrigin = hostOrigin+ "resources/";
 
@@ -31,6 +39,10 @@ function init(){
   //$("#card").load("https://cors-anywhere.herokuapp.com/"+"https://qoomon.github.io/Jira-Issue-Card-Printer/card.html");
 
   console.logLevel = console.INFO;
+
+  if (typeof done === 'function') {
+    done();
+  }
 }
 
 function main(){
