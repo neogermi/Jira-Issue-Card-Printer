@@ -521,21 +521,20 @@ function newPage(issueKey){
   <div class="card-header">
     <div class="type-icon badge circular"></div>
     <div class="key badge"></div>
-    <div class="estimate badge circular " contenteditable="true"></div>
     <div class="due">
       <div class="due-icon badge circular "></div>
-      <div class="due-date badge" contenteditable="true"></div>
+      <div class="due-date badge"></div>
     </div>
   </div>
   <div class="card-content">
     <div class="content-header">
-      <span class="summary" contenteditable="true"></span>
+      <span class="summary"></span>
     </div>
-    <div class="description" contenteditable="true"></div>
+    <div class="description"></div>
   </div>
   <div class="card-footer">
     <div class="assignee badge circular"></div>
-    <div class="qr-code badge"></div>
+    <div class="estimate badge"></div>
     <div class="attachment badge circular"></div>
     <div class="epic badge">
       <span class="epic-key"></span>
@@ -693,7 +692,6 @@ body {
   background-image: url({RESOURCE_ORIGIN}icons/Flash.png);
 }
 .estimate {
-  display: none;
   position: relative;
   float: left;
   left: -0.65cm;
@@ -744,6 +742,7 @@ body {
   line-height: 0.7cm;
 }
 .attachment {
+  display: none;
   position: relative;
   float: left;
   margin-left: 0.6cm;
@@ -757,6 +756,7 @@ body {
   background-position: center;
 }
 .assignee {
+  display: none;
   position: relative;
   float: right;
   width: 2.1cm;
@@ -793,7 +793,7 @@ body {
   height: auto;
   position: relative;
   float:right;
-  margin-right:0.6cm;
+  right: 1cm;
   padding-top: 0.2cm;
   padding-bottom: 0.2cm;
   padding-left: 0.3cm;
