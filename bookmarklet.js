@@ -31,10 +31,10 @@ function init(done){
 
   printScopeDeviderToken = "<b>Attachment</b>";
 
-  hostOrigin = "https://neogermi.github.io/Jira-Issue-Card-Printer/";
+  hostOrigin = "https://qoomon.github.io/Jira-Issue-Card-Printer/";
   if(isDev){
     alert("Develop Version");
-    hostOrigin = "https://rawgit.com/neogermi/Jira-Issue-Card-Printer/develop/";
+    hostOrigin = "https://rawgit.com/qoomon/Jira-Issue-Card-Printer/develop/";
   }
   resourceOrigin = hostOrigin+ "resources/";
 
