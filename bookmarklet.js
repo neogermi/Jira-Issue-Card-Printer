@@ -704,7 +704,7 @@ body {
   background-position: center;
   text-align: center;
   font-weight: bold;
-  font-size: 1cm;
+  font-size: 3cm;
   z-index: 999;
   line-height: 1;
 }
